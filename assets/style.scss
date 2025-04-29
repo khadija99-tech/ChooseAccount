@@ -1,0 +1,161 @@
+$blue: #5DA4CA;
+$dark-bg: #101526;
+$light: #fff;
+$red: #D13C3F;
+$grey: #8F9AB6;
+
+body {
+  background: $dark-bg;
+  color: $light;
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 2rem;
+}
+
+.arrow-animate {
+  animation: 1.5s infinite arrow-bounce;
+  background-image: url(https://funderpro.com/wp-content/themes/funderpro/images/arrow-down.png);
+  width: 24px;
+  height: 24px;
+  margin-inline: 1rem;
+  display: inline-block;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+
+@keyframes arrow-bounce {
+  0%, 100% {
+    transform: translateY(0);
+}
+50% {
+    transform: translateY(5px);
+}
+  
+}
+
+.pricing-table {
+  max-width: 1000px;
+  margin: auto;
+  background: #151823;
+  border-radius: 16px;
+  padding: 2rem;
+
+  h2 {
+    text-align: center;
+    font-size: 2rem;
+
+    span {
+      color: $red;
+    }
+  }
+
+  .bor {
+    border: 1px solid transparent;
+    background:
+      linear-gradient($dark-bg, $dark-bg) padding-box,
+      linear-gradient(90deg, $red, $blue) border-box;
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    margin-top: -40px;
+    border-radius: 8px;
+  }
+
+  .phases,
+  .amounts {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 2rem 0;
+
+    button {
+      position: relative;
+      padding: 0.75rem 1.5rem;
+      border: 1px solid transparent;
+      border-radius: 8px;
+      background:
+        linear-gradient($dark-bg, $dark-bg) padding-box,
+        linear-gradient(90deg, $grey, $grey) border-box;
+      background-origin: border-box;
+      background-clip: padding-box, border-box;
+      color: $light;
+      cursor: pointer;
+      z-index: 1;
+
+      &.active {
+        background:
+          linear-gradient($dark-bg, $dark-bg) padding-box,
+          linear-gradient(90deg, $red, $blue) border-box;
+        background-origin: border-box;
+        background-clip: padding-box, border-box;
+        box-shadow: 0 0 10px $blue;
+      }
+    }
+
+
+  }
+
+  .table-wrapper {
+    overflow-x: auto;
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 1.5rem;
+
+      th,
+      td {
+        text-align: center;
+        padding: 1rem;
+        border-bottom: 1px solid #2a2d3e;
+      }
+
+      .subtext {
+        font-size: 0.85rem;
+        color: $grey;
+        margin-top: 1rem;
+      }
+    }
+  }
+
+
+  .action2 {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    border: 1px solid transparent;
+    background:
+      linear-gradient($dark-bg, $dark-bg) padding-box,
+      linear-gradient(90deg, $red, $blue) border-box;
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    border-radius: 40px;
+    padding: 15px;
+    margin-bottom: -30px;
+
+    .cta {
+      background: $red;
+      color: $light;
+      padding: 1rem 2rem;
+      border: none;
+      border-radius: 999px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+  }
+
+
+  .action1 {
+    text-align: center;
+    .show-more {
+      margin: 30px 0;
+      background: transparent;
+      color: $light;
+      padding: 0.5rem 1rem;
+      border: none;
+      cursor: pointer;
+    }
+  }
+}
